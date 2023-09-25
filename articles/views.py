@@ -9,7 +9,7 @@ from django.views.generic.edit import UpdateView , DeleteView , CreateView
 from django.urls import reverse_lazy
 from django.contrib.auth.mixins import (LoginRequiredMixin , UserPassesTestMixin)
 from django.db import models
-from .forms import CommentForm
+from .forms import CommentForm , ArticleForm
 from django.urls import reverse
 from django.http import HttpResponse
 
@@ -25,6 +25,9 @@ def article_list(request):
     }
     return render(request,"articles/article_list.html",context)
 
+
+def article_update(request,pk):
+    pass
 
 # class  ArticleDetailView(DetailView):
     model = Article
