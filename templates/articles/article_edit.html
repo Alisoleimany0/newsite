@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block title %}
+    update article
+{% endblock title %}
+
+
+{% block content %}
+<h1>Edit {{object}}</h1>
+<hr>
+<form action ="" method="POST">
+    {% csrf_token %}
+    {{form.as_p}}
+    <button type="submit" class="btn btn-bg-primary">update</button>    
+</form>
+
+{% endblock content %}
