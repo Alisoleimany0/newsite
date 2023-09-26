@@ -12,7 +12,7 @@
     {% csrf_token %}
     {{form.as_p}}
     <p>Are You sure to Delete {{Article.title}}?</p>
-    <button type="submit" class="btn btn-bg-primary">Delete</button>    
+    <button type="submit" class="btn btn-danger">Delete</button>    
 </form>
 
 {% endblock content %}

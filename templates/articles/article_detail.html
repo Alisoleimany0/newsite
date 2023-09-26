@@ -28,7 +28,9 @@
             </form>
         {% endif %}
     </p>
-    <a href="{% url 'article_update' article.id %}">Edit</a> | <a href="{% url 'article_delete' article.id %}">Delete</a>
- 
+    {% if user.is_authenticated and article.author == user %}
+    <a href="{% url 'article_update' article.id %}">Edit</a> | <a href="{% url 'article_delete' article.id %}">Delete</a> 
+    {% endif %}
+
 {% endblock content %}
 
